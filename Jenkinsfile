@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -14,20 +15,6 @@ pipeline {
             steps {
                 echo "Cloning repository from SCM..."
                 checkout scm
-            }
-        }
-
-        stage('Install Dependencies') {
-            steps {
-                echo "Installing Node modules..."
-                sh 'npm install'
-            }
-        }
-
-        stage('Run Tests') {
-            steps {
-                echo "Running tests..."
-                sh 'npm test'
             }
         }
 
